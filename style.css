@@ -1,0 +1,41 @@
+body {  
+  margin: 0;  
+  padding: 0;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  height: 100vh;  
+  background-color: #FFC0CB; /* 粉色背景 */  
+  overflow: hidden; /* 防止滚动条出现 */  
+}  
+
+.diagonal-line {  
+  position: relative;  
+  width: 300px; /* 根据需要调整宽度 */  
+  height: 300px; /* 根据需要调整高度 */  
+  transform: rotate(45deg); /* 旋转容器以创建对角线效果 */  
+  transform-origin: bottom left; /* 设置旋转的原点 */  
+}  
+
+.diagonal-line img {  
+  position: absolute;  
+  width: 100px; /* 根据需要调整图像宽度 */  
+  height: 100px; /* 根据需要调整图像高度 */  
+  bottom: 0; /* 将图像放置在容器的底部 */  
+  left: 0; /* 初始位置，将根据需要调整 */  
+  transform: rotate(-45deg); /* 旋转图像以抵消容器的旋转 */  
+  transform-origin: bottom left; /* 设置图像旋转的原点 */  
+}  
+
+/* 调整每个图像的位置以形成对角线 */  
+#alice1 {  
+  left: 0;  
+}  
+
+#alice2 {  
+  left: 120px; /* 根据图像大小和容器大小调整 */  
+}  
+
+#alice3 {  
+  left: 240px; /* 根据图像大小和容器大小调整 */  
+}
